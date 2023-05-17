@@ -11,6 +11,13 @@ const ShoppingItem = (props) => {
         <h2>{props.name}</h2>
         <div className="shopping-item__price">{props.amount}KM</div>
       </div>
+      <button
+        onClick={() => {
+          console.log("clicked");
+        }}
+      >
+        Change name
+      </button>
     </Card>
   );
 };
