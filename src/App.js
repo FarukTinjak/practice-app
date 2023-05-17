@@ -1,7 +1,7 @@
 import React from "react";
 import Shoppings from "./components/Shoppings/Shoppings";
 
-function App() {
+const App = () => {
   const shoppings = [
     { id: "e1", name: "Milk", amount: 2.0, date: new Date(2023, 4, 16) },
     { id: "e2", name: "Chocolate", amount: 1.67, date: new Date(2023, 4, 16) },
@@ -20,6 +20,6 @@ function App() {
       <Shoppings items={shoppings} />
     </div>
   ); */
-}
+};
 
 export default App;

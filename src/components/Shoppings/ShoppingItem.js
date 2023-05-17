@@ -3,7 +3,7 @@ import "./ShoppingItem.css";
 import ShoppingDate from "./ShoppingDate";
 import Card from "../UI/Card";
 
-function ShoppingItem(props) {
+const ShoppingItem = (props) => {
   return (
     <Card className="shopping-item">
       <ShoppingDate date={props.date} />
@@ -13,5 +13,5 @@ function ShoppingItem(props) {
       </div>
     </Card>
   );
-}
+};
 export default ShoppingItem;

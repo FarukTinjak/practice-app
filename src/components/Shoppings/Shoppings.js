@@ -3,7 +3,7 @@ import ShoppingItem from "./ShoppingItem";
 import Card from "../UI/Card";
 import "./Shoppings.css";
 
-function Shoppings(props) {
+const Shoppings = (props) => {
   return (
     <Card className="shoppings">
       <ShoppingItem
@@ -28,5 +28,5 @@ function Shoppings(props) {
       />
     </Card>
   );
-}
+};
 export default Shoppings;

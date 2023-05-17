@@ -1,7 +1,7 @@
 import React from "react";
 import "./ShoppingDate.css";
 
-function ShoppingDate(props) {
+const ShoppingDate = (props) => {
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const year = props.date.getFullYear();
   const day = props.date.toLocaleString("en-us", { day: "2-digit" });
@@ -12,5 +12,5 @@ function ShoppingDate(props) {
       <div className="shopping-date__day">{day}</div>
     </div>
   );
-}
+};
 export default ShoppingDate;
