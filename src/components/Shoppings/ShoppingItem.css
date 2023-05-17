@@ -34,6 +34,35 @@
   padding: 0.5rem;
   border-radius: 12px;
 }
+.shopping-item__quantity {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #021d24;
+  background-color: #ffffff;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+.shopping-item__quantity_container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.counter {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+}
+.counter-decrement {
+  background-color: rgb(210, 160, 113);
+}
+.counter-increment {
+  background-color: rgb(210, 160, 113);
+}
 
 @media (min-width: 580px) {
   .shopping-item__name {
