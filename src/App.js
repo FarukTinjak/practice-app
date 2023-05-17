@@ -1,5 +1,5 @@
 import React from "react";
-import Shoppings from "./components/Shoppings";
+import Shoppings from "./components/Shoppings/Shoppings";
 
 function App() {
   const shoppings = [

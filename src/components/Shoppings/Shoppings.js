@@ -1,6 +1,7 @@
+import React from "react";
 import ShoppingItem from "./ShoppingItem";
+import Card from "../UI/Card";
 import "./Shoppings.css";
-import Card from "./Card";
 
 function Shoppings(props) {
   return (

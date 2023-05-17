@@ -1,6 +1,7 @@
+import React from "react";
 import "./ShoppingItem.css";
 import ShoppingDate from "./ShoppingDate";
-import Card from "./Card";
+import Card from "../UI/Card";
 
 function ShoppingItem(props) {
   return (
