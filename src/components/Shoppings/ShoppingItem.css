@@ -17,12 +17,20 @@
   flex: 1;
 }
 
-.shopping-item h2 {
+.shopping-item input {
   color: #3a3a3a;
   font-size: 1rem;
   flex: 1;
   margin: 0 1rem;
   color: white;
+  background: none;
+  border: 0;
+}
+.shopping-item input:focus-visible {
+  outline: 0;
+}
+.shopping-item input:focus {
+  outline: 0;
 }
 
 .shopping-item__price {
@@ -37,8 +45,8 @@
 .shopping-item__quantity {
   font-size: 1rem;
   font-weight: bold;
-  color: #021d24;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #3a3a3a;
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
@@ -56,12 +64,7 @@
   width: 30px;
   height: 30px;
   border-radius: 12px;
-}
-.counter-decrement {
-  background-color: rgb(210, 160, 113);
-}
-.counter-increment {
-  background-color: rgb(210, 160, 113);
+  background-color: 3a3a3a;
 }
 
 @media (min-width: 580px) {
@@ -72,7 +75,7 @@
     flex: 1;
   }
 
-  .shopping-item__name h2 {
+  .shopping-item__name input {
     font-size: 1.25rem;
   }
 
