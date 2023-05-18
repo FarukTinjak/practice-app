@@ -1,0 +1,48 @@
+.new-shopping {
+  background-color: darkkhaki;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-shopping button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #ffffff;
+  background-color: #021d24;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.new-shopping button:hover,
+.new-shopping button:active {
+  background-color: #074d5f;
+  border-color: #510674;
+}
+
+.new-shopping button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.new-shopping button.alternative:hover,
+.new-shopping button.alternative:active {
+  background-color: #ddb3f8;
+}
+.new-shopping__actions {
+  display: flex;
+  justify-content: center;
+}
+.new-shopping__controls {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
