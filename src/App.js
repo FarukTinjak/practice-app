@@ -1,6 +1,6 @@
 import React from "react";
 import Shoppings from "./components/Shoppings/Shoppings";
-
+import NewShopping from "./components/NewShopping/NewShopping";
 const App = () => {
   const shoppings = [
     {
@@ -40,7 +40,7 @@ const App = () => {
   // );
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewShopping />
       <Shoppings items={shoppings} />
     </div>
   );
