@@ -32,6 +32,10 @@ const App = () => {
       date: new Date(2023, 1, 11),
     },
   ];
+  const addShoppingHandler = (shopping) => {
+    console.log("In.App.js");
+    console.log(shopping);
+  };
   // return React.createElement(
   //   "div",
   //   {},
@@ -40,7 +44,7 @@ const App = () => {
   // );
   return (
     <div>
-      <NewShopping />
+      <NewShopping onAddShopping={addShoppingHandler} />
       <Shoppings items={shoppings} />
     </div>
   );
