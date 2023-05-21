@@ -3,8 +3,8 @@ import "./ShoppingForm.css";
 const ShoppingForm = (props) => {
   const [enteredName, SetEndeteredName] = useState("");
   const [enteredAmount, SetEndeteredAmount] = useState("");
-  const [enteredQuantity, SetEndeteredQuantity] = useState("");
-  const [enteredDate, SetEndeteredDate] = useState("");
+  const [enteredQuantity, SetEndeteredQuantity] = useState(1);
+  const [enteredDate, SetEndeteredDate] = useState("2023-05-22");
 
   // const [userInput, setUserInput] = useState({
   //   enteredName: "",
@@ -40,16 +40,24 @@ const ShoppingForm = (props) => {
     //   enteredDate: event.target.value,
     // });
   };
-
+  const validateFormHandler = () => {
+    if (enteredName.trim().length === 0) {
+      return false;
+    }
+    return true;
+  };
   const submitHandler = (event) => {
     event.preventDefault();
-
+    if (!validateFormHandler()) {
+      return;
+    }
     const shoppingData = {
       name: enteredName,
       amount: enteredAmount,
       quantity: enteredQuantity,
       date: new Date(enteredDate),
     };
+
     props.onSaveShoppingData(shoppingData);
     SetEndeteredName("");
     SetEndeteredAmount("");
@@ -92,7 +100,6 @@ const ShoppingForm = (props) => {
           <label>Date</label>
           <input
             type="date"
-            min="2023-1-1"
             value={enteredDate}
             onChange={dateChangeHandler}
           ></input>
