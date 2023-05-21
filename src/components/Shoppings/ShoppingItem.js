@@ -12,7 +12,7 @@ const ShoppingItem = (props) => {
     setName(event.target.value);
   };
   const incrementHandler = () => {
-    setQuantity(quantity + 1);
+    setQuantity(parseInt(quantity) + 1);
   };
   const decrementHandler = () => {
     if (quantity >= 2) setQuantity(quantity - 1);
