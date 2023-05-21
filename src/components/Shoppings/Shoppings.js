@@ -3,6 +3,7 @@ import ShoppingItem from "./ShoppingItem";
 import Card from "../UI/Card";
 import "./Shoppings.css";
 import ShoppingsFilter from "./ShoppingsFilter";
+import ShoppingDate from "./ShoppingDate";
 
 const Shoppings = (props) => {
   const [filteredYear, setFilteredYear] = useState("2023");
@@ -10,6 +11,10 @@ const Shoppings = (props) => {
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
+  const filteredShoppings = props.items.filter((shopping) => {
+    return shopping.date.getFullYear().toString() === filteredYear;
+  });
+
   return (
     <div>
       <Card className="shoppings">
@@ -17,7 +22,7 @@ const Shoppings = (props) => {
           selectedYear={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {props.items.map((shopping) => (
+        {filteredShoppings.map((shopping) => (
           <ShoppingItem
             key={shopping.id}
             name={shopping.name}
