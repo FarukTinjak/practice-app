@@ -15,6 +15,20 @@ const Shoppings = (props) => {
     return shopping.date.getFullYear().toString() === filteredYear;
   });
 
+  let shoppingContent = (
+    <p className="filtered-shoppings_paragraph">No shoppings found.</p>
+  );
+  if (filteredShoppings.length > 0) {
+    shoppingContent = filteredShoppings.map((shopping) => (
+      <ShoppingItem
+        key={shopping.id}
+        name={shopping.name}
+        amount={shopping.amount}
+        quantity={shopping.quantity}
+        date={shopping.date}
+      />
+    ));
+  }
   return (
     <div>
       <Card className="shoppings">
@@ -22,19 +36,7 @@ const Shoppings = (props) => {
           selectedYear={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {filteredShoppings.length === 0 ? (
-          <p className="filtered-shoppings_paragraph">No shoppings found.</p>
-        ) : (
-          filteredShoppings.map((shopping) => (
-            <ShoppingItem
-              key={shopping.id}
-              name={shopping.name}
-              amount={shopping.amount}
-              quantity={shopping.quantity}
-              date={shopping.date}
-            />
-          ))
-        )}
+        {shoppingContent}
       </Card>
     </div>
   );
