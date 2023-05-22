@@ -5,7 +5,7 @@ import "./Shoppings.css";
 import ShoppingsFilter from "./ShoppingsFilter";
 import ShoppingDate from "./ShoppingDate";
 import ShoppingsList from "./ShoppingsList";
-
+import ShoppingChart from "./ShoppingsChart";
 const Shoppings = (props) => {
   const [filteredYear, setFilteredYear] = useState("2023");
 
@@ -37,6 +37,7 @@ const Shoppings = (props) => {
           selectedYear={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
+        <ShoppingChart shoppings={filteredShoppings} />
         <ShoppingsList items={filteredShoppings} />
       </Card>
     </div>
