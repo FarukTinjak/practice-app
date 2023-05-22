@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NewShopping.css";
 import ShoppingForm from "./ShoppingForm";
 const NewShopping = (props) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const isEditingHandler = () => {
+    setIsEditing(true);
+  };
+  const noEditingHandler = () => {
+    setIsEditing(false);
+  };
   const saveShoppingDataHandler = (enteredShoppingData) => {
     const shoppingData = {
       ...enteredShoppingData,
@@ -9,10 +16,19 @@ const NewShopping = (props) => {
     };
 
     props.onAddShopping(shoppingData);
+    setIsEditing(false);
   };
   return (
     <div className="new-shopping">
-      <ShoppingForm onSaveShoppingData={saveShoppingDataHandler} />
+      {!isEditing && (
+        <button onClick={isEditingHandler}>Add New shopping</button>
+      )}
+      {isEditing && (
+        <ShoppingForm
+          onSaveShoppingData={saveShoppingDataHandler}
+          onCancel={noEditingHandler}
+        />
+      )}
     </div>
   );
 };

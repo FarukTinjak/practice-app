@@ -106,6 +106,9 @@ const ShoppingForm = (props) => {
         </div>
       </div>
       <div className="new-shopping__actions">
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Shopping</button>
       </div>
     </form>
