@@ -19,31 +19,33 @@ const ShoppingItem = (props) => {
   };
 
   return (
-    <Card className="shopping-item">
-      <ShoppingDate date={date} />
-      <div className="shopping-item__name">
-        <input defaultValue={name} onChange={editHandler} />
+    <li>
+      <Card className="shopping-item">
+        <ShoppingDate date={date} />
+        <div className="shopping-item__name">
+          <input defaultValue={name} onChange={editHandler} />
 
-        <div className="shopping-item__quantity_container">
-          <button
-            onClick={decrementHandler}
-            className="counter counter-decrement"
-          >
-            -
-          </button>
-          <div className="shopping-item__quantity">{quantity}</div>
-          <button
-            onClick={incrementHandler}
-            className="counter counter-increment"
-          >
-            +
-          </button>
+          <div className="shopping-item__quantity_container">
+            <button
+              onClick={decrementHandler}
+              className="counter counter-decrement"
+            >
+              -
+            </button>
+            <div className="shopping-item__quantity">{quantity}</div>
+            <button
+              onClick={incrementHandler}
+              className="counter counter-increment"
+            >
+              +
+            </button>
+          </div>
+          <div className="shopping-item__price">
+            {(amount * quantity).toFixed(2)}KM
+          </div>
         </div>
-        <div className="shopping-item__price">
-          {(amount * quantity).toFixed(2)}KM
-        </div>
-      </div>
-    </Card>
+      </Card>
+    </li>
   );
 };
 export default ShoppingItem;
