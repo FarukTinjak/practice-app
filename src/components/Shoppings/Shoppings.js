@@ -22,15 +22,19 @@ const Shoppings = (props) => {
           selectedYear={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {filteredShoppings.map((shopping) => (
-          <ShoppingItem
-            key={shopping.id}
-            name={shopping.name}
-            amount={shopping.amount}
-            quantity={shopping.quantity}
-            date={shopping.date}
-          />
-        ))}
+        {filteredShoppings.length === 0 ? (
+          <p className="filtered-shoppings_paragraph">No shoppings found.</p>
+        ) : (
+          filteredShoppings.map((shopping) => (
+            <ShoppingItem
+              key={shopping.id}
+              name={shopping.name}
+              amount={shopping.amount}
+              quantity={shopping.quantity}
+              date={shopping.date}
+            />
+          ))
+        )}
       </Card>
     </div>
   );
