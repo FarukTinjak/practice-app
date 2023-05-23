@@ -52,8 +52,8 @@ const ShoppingForm = (props) => {
       return;
     }
     const shoppingData = {
-      name: enteredName,
-      amount: enteredAmount,
+      title: enteredName,
+      amount: +enteredAmount,
       quantity: enteredQuantity,
       date: new Date(enteredDate),
     };

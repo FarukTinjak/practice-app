@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Shoppings from "./components/Shoppings/Shoppings";
 import NewShopping from "./components/NewShopping/NewShopping";
+import Footer from "./components/Footer/Footer";
 const DUMMY_SHOPPINGS = [
   {
     id: "e1",
@@ -50,6 +51,7 @@ const App = () => {
     <div>
       <NewShopping onAddShopping={addShoppingHandler} />
       <Shoppings items={shoppings} />
+      <Footer />
     </div>
   );
 };

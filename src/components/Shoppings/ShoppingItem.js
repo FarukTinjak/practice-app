@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ShoppingItem.css";
 import ShoppingDate from "./ShoppingDate";
 import Card from "../UI/Card";
+import Footer from "../Footer/Footer";
 
 const ShoppingItem = (props) => {
   const [name, setName] = useState(props.name);
